@@ -28,7 +28,7 @@ public class HeartHealthActivity extends AppCompatActivity {
     Button btnAdd, btnList;
     ImageButton btnDate;
     Calendar cal;
-    HeartHealthDAO myDatabase = null;
+    public HeartHealthDAO myDatabase = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +120,7 @@ public class HeartHealthActivity extends AppCompatActivity {
             Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-    private String getStatus(ArrayList<String> arrDiseases, float heartBeat, float heartPressure, String ageGroup){
+    public String getStatus(ArrayList<String> arrDiseases, float heartBeat, float heartPressure, String ageGroup){
         String status = "";
         String priorityDisease = "No underlying diseases";
         String[] priority  = {"Mental illness","Fatigue","High blood pressure","Diabetes"};

@@ -23,11 +23,14 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class BMIIndexActivity extends AppCompatActivity {
-    EditText editHeight, editWeight, editDate;
-    Button btnAdd, btnList;
-    ImageButton btnDate;
+    public EditText editHeight;
+    public EditText editWeight;
+    public EditText editDate;
+    public Button btnAdd;
+    public Button btnList;
+    public ImageButton btnDate;
     Calendar cal;
-    BMIIndexDAO myDatabase = null;
+    public BMIIndexDAO myDatabase = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,7 +126,7 @@ public class BMIIndexActivity extends AppCompatActivity {
             Toast.makeText(this, "Error permission: "+ex.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-    private String getStatus(ArrayList<String> arrDiseases, float height, float weight, String ageGroup){
+    public String getStatus(ArrayList<String> arrDiseases, float height, float weight, String ageGroup){
         String status = "";
         String priorityDisease = "No underlying diseases";
         String[] priority  = {"Mental illness","Fatigue","High blood pressure","Diabetes"};

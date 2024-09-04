@@ -33,7 +33,7 @@ public class CaloriesActivity extends AppCompatActivity {
     TextView txtDate;
     Button btnAdd,btnList;
     CaloriesDAO dbHandler;
-    ProfileDAO profileDAO;
+    public ProfileDAO profileDAO;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +86,7 @@ public class CaloriesActivity extends AppCompatActivity {
             return true;
         }
     }
-    private String getStatusFromAgeGroup(float intake, ArrayList<String> arrDiseases) {
+    public String getStatusFromAgeGroup(float intake, ArrayList<String> arrDiseases) {
         String priorityDisease = "No underlying diseases";
         String[] priority  = {"Mental illness","Fatigue","High blood pressure","Diabetes"};
         for(String p : priority){

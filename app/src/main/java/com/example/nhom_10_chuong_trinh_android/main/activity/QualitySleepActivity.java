@@ -37,7 +37,7 @@ public class QualitySleepActivity extends AppCompatActivity {
     Button btnAdd,btnList;
     Calendar dateCal;
     Calendar timeCal;
-    ProfileDAO profileDAO = null;
+    public ProfileDAO profileDAO = null;
     QualitySleepDAO qualitySleepDAO;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -272,7 +272,7 @@ public class QualitySleepActivity extends AppCompatActivity {
             return -1;
         }
     }
-    private String getStatusFromAgeGroup(float sleepDuration) {
+    public String getStatusFromAgeGroup(float sleepDuration) {
         String ageGroup = profileDAO.getAgeGroup();
         if (ageGroup.equals("Children")) {
             return evaluateSleepStatusForYoungChildren(sleepDuration);

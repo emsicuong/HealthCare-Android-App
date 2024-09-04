@@ -26,12 +26,13 @@
         </activity>
         <activity
             android:name="com.example.nhom_10_chuong_trinh_android.common.activity.RegisterActivity"
-            android:exported="false"></activity>
+            android:exported="false"/>
         <activity
             android:name="com.example.nhom_10_chuong_trinh_android.common.activity.MainActivity"
-            android:exported="false"></activity>
+            android:exported="false"/>
         <activity
             android:name="com.example.nhom_10_chuong_trinh_android.main.activity.BMIIndexActivity"
+            android:theme="@style/Theme.AppCompat.Light"
             android:exported="false" />
         <activity
             android:name="com.example.nhom_10_chuong_trinh_android.main.activity.BMIIndexListActivity"
